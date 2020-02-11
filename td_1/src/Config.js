@@ -9,23 +9,15 @@ export default class Config extends React.Component {
         }
     }
 
-    handleSubmit = (event) => {
-        event.preventDefault();
-    };
-
     handleInputChange = (event) => {
-        this.setState({
-            fullName: event.target.value
-        })
         this.props.fullName(event.target.value);
     };
 
     render() {
-        const{ fullName } = this.state;
+        const{fullName} = this.state;
         return (
             <div>
-                <p>Votre nom : {fullName}</p>
-                <form onSubmit={this.handleSubmit}>
+                <form>
                     <label>Nom :</label>
                     <input type="text" name="fullName" onChange={this.handleInputChange}/>
                 </form>
