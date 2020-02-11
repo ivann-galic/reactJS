@@ -1,0 +1,54 @@
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #029999;
+}
+
+.app {
+    height: 215px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    text-align: center;
+    padding-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 10px 50px #555;
+    border-radius: 6px;
+}
+
+.app label{
+    display: block;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.app input{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+#submit-btn {
+    margin-right: 10px;
+}
+
+.reponse {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40px;
+    width: 350px;
+    text-align: center;
+    background-color: #e8a331;
+    margin-top: 35px;
+    line-height: 8px;
+    color: white;
+}
+
