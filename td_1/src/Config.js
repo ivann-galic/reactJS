@@ -1,35 +1,35 @@
 import React, {Component} from "react";
 
-import App from "./App";
-
 export default class Config extends React.Component {
 
-    state={name: null};
+    constructor(props){
+        super(props);
+        this.state = {
+        fullName: null}
+    }
 
-    change = e => {
+    handleSubmit = (event) => {
+    event.preventDefault()
+    };
+
+    handleInputChange = (event) => {
+        event.preventDefault();
         this.setState({
-            [e.target.id]: e.target.value
+            fullName: event.target.value
         })
     };
 
-    submit = e => {
-        e.preventDefault();
-        return (this.state);
-    };
-
     render() {
+        const{fullName} = this.state;
         return (
             <div>
-                <form onSubmit={this.submit}>
+                <p>Votre nom : {fullName}</p>
+                <form onSubmit={this.handleSubmit}>
                     <label>Nom :</label>
-                    <input type="text" id="name" onChange={this.change}/>
+                    <input type="text" name="fullName" onChange={this.handleInputChange}/>
                     <button>Envoyer</button>
                 </form>
             </div>
         );
-    }
-
-    getName() {
-        return this.change;
     }
 }

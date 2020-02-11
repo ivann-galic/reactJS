@@ -4,6 +4,7 @@ import About from './About';
 import Config from './Config';
 
 export default class App extends Component {
+
   render() {
 
     return (
@@ -20,9 +21,11 @@ export default class App extends Component {
             <Switch>
                 <Route path="/About"><About /></Route>
                 <Route path="/Config"><Config /></Route>
+                <div>
+                    <h2>Home</h2>
+                    <p><getName/>Hello !</p>
+                </div>
             </Switch>
-            <h2>Home</h2>
-            <p><getName/>Hello</p>
         </Router>
     );
   }
