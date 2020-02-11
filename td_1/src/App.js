@@ -6,8 +6,22 @@ import Home from './Home';
 
 export default class App extends Component {
 
-  render() {
+    constructor(props){
+        super(props);
+        this.state = {
+            fullName: ''
+        }
+    }
 
+    exampleClick = (e) => {
+        console.log('fullName', e);
+        this.setState({
+            fullName: e
+        })
+    }
+
+  render() {
+      const{ fullName } = this.state;
     return (
         <Router>
             <nav>
@@ -22,8 +36,8 @@ export default class App extends Component {
             <Switch>
 
                 <Route path="/About"><About /></Route>
-                <Route path="/Config"><Config /></Route>
-                <Route path="/Home"><Home /></Route>
+                <Route path="/Config"><Config fullName={this.exampleClick} /></Route>
+                <Route path="/Home"><Home fullName={fullName} /></Route>
             </Switch>
         </Router>
     );
