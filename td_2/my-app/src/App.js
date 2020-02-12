@@ -26,7 +26,7 @@ export default class App extends Component {
                         <button >Recommencer</button>
                     </form>
                     <div class="reponse">
-                        <p>{myNumber}</p>
+                        <p></p>
                     </div>
                 </div>
             </div>

@@ -9,7 +9,7 @@
 }
 
 .app {
-    height: 215px;
+    height: 240px;
     width: 400px;
     display: flex;
     flex-direction: column;
@@ -47,8 +47,21 @@
     width: 350px;
     text-align: center;
     background-color: #e8a331;
-    margin-top: 35px;
+    margin-top: 40px;
     line-height: 8px;
     color: white;
 }
 
+.app button {
+    margin-top: 20px;
+    width: 130px;
+    height: 30px;
+    font-size: 15px;
+    background-color: #029999;
+    color: white;
+    outline: 0;
+}
+
+.app button:hover {
+    background-color: #005F5F;
+}
