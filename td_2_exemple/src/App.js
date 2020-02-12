@@ -2,6 +2,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducer from './redux/reducers'
+import './component/Home.css';
 import './App.css';
 
 import {
@@ -14,7 +15,6 @@ import {
 import Home from './component/Home';
 import Students from './component/Students';
 import Student from './component/Students/Student';
-import {randomNb} from './component/Number';
 
 import {
   addStudent,
@@ -71,10 +71,9 @@ export default class App extends React.Component {
   render() {
     const {routes} = this;
     return (
-
       <Provider store={store}>
         <Router>
-          <div>
+          <div class="app">
             <ul>
               {routes.map((route, i) =>
                 (
@@ -82,9 +81,6 @@ export default class App extends React.Component {
                 )
               )}
             </ul>
-
-            <div className="container">
-              <div className="app">
                 <Switch>
                   {routes.map((route, i) =>
                       (
@@ -92,18 +88,6 @@ export default class App extends React.Component {
                       )
                   )}
                 </Switch>
-                <form>
-                  <label>Entrez un nombre entre 0 et 100 :</label>
-                  <input type="number" name="number"/>
-                  <button id="submit-btn" type="submit" onClick={() => this.randomNb}>Envoyer</button>
-                  <button>Recommencer</button>
-                </form>
-                <div className="reponse">
-                  <p></p>
-                </div>
-              </div>
-            </div>
-
           </div>
         </Router>
       </Provider>

@@ -5,7 +5,7 @@ import { withRouter } from 'react-router-dom';
 import { connect } from "react-redux";
 import { addStudent, delStudent } from "../redux/actions";
 
-class Number extends React.Component {
+class Students extends React.Component {
 	addStudent() {
 		this.props.addStudent({
 	      name: 'Machin',
@@ -55,7 +55,7 @@ const mapDispatchToProps = (dispatch) => {
 export default withRouter(connect(
 	mapStateToProps,
 	mapDispatchToProps
-)(Number));
+)(Students));
 
 
 
