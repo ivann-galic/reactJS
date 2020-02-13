@@ -1,34 +1,56 @@
-//let entry = document.getElementById('data').value;
-let count = 0;
-let win = false;
+var count = 0;
+var win = false;
 
 export function randomNb (max) {
     return (Math.floor(Math.random() * max));
 }
 
-/*export function play (myRandom, infos) {
+export function play (e, nb, entry, infos) {
+    e.preventDefault();
 
     count++;
 
-    if (myRandom !== entry) {
-        if (myRandom < entry){
-            infos = "C'est plus petit !";
-        }else if (myRandom > entry){
+
+        if(nb>entry){
             infos = "C'est plus grand !";
         }
-    }
-
-    if(myRandom === entry){
-        infos = "Gagné !";
-/!*        console.log(myRandom);
-        if (myTable.length === 5) {
-            myTable.shift();
+        else if(nb<entry){
+            infos = "C'est plus petit !";
         }
-        myTable.push([myRandom,counter]);
-        displayTable();*!/
-        win = true;
-    }
+        else {
+            infos = "Gagné !";
+        }
 
-}*/
+//     if (nb !== entry) {
+//         if (nb < entry){
+//             infos = "C'est plus petit !";
+//         }else if (nb > entry){
+//             infos = "C'est plus grand !";
+//         }
+//     }
+//
+//     if(nb == entry){
+//         infos = "Gagné !";
+//
+// /*        if (myTable.length === 5) {
+//             myTable.shift();
+//         }
+//         myTable.push([myRandom,counter]);
+//         displayTable();*/
+//         win = true;
+//     }
+    console.log(nb);
+    console.log(entry);
+    console.log(infos);
+}
+
+export function replay (e, nb, entry, infos) {
+    e.preventDefault();
+
+
+
+
+}
+
 
 
