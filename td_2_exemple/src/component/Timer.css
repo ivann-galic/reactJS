@@ -1,42 +1,16 @@
-@font-face {
-    font-family: 'Roboto', sans-serif;
-    src: url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap');
-}
-
-.container-score {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #029999;
-}
-
-.card-score {
-    height: 600px;
-    width: 900px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: -60px;
-    text-align: center;
-    border: white solid 3px;
-}
-
-.card-score p {
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 500;
-    font-size: 40px;
+.timer{
+    border: none;
     color: white;
-}
-
-.card-score span {
-    background-color: #e8a331;
-    font-weight: 600;
-    padding-left: 10px;
-    padding-right: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    width: 150px;
+    height: 40px;
+    background-color: #00897b;
+    border-radius: 10em;
+    outline: 0;
+    display: inline-block;
+    border: 0;
+    margin-left: 10px;
 }
 
 

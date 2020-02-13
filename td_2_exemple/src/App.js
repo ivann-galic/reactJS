@@ -42,11 +42,6 @@ export default class App extends React.Component {
             text: 'A propos',
             component: About
         },
-        {
-            path: '/Timer',
-            text: 'Timer',
-            component: Timer
-        },
       {
         path: '/students',
         text: 'Etudiants',

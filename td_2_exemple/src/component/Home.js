@@ -1,6 +1,7 @@
 import React from "react";
 import {randomNb,replay} from "./Number";
 import './Home.css';
+import Timer from "./Timer";
 
 const nbRandom = randomNb(101);
 var count = 0;
@@ -72,6 +73,7 @@ export default class Home extends React.Component {
 							<input id="number-form" type="number" value={this.state.entry} onChange={e => this.setState({entry: e.target.value})}/>
 							<button id="submit-btn" onClick={e => this.play(e)} >Envoyer</button>
 							<button id="restart-btn" onClick={(e)=>this.replay(e)}>Recommencer</button>
+							<Timer />
 						</form>
 						<div className="reponse">
 							<p>{this.state.infos}</p>
