@@ -18,7 +18,7 @@ export default class App extends Component {
         this.setState({
             fullName: e
         })
-    }
+    };
 
   render() {
       const{ fullName } = this.state;
