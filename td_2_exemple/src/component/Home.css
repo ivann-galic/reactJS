@@ -14,8 +14,8 @@
 }
 
 .card {
-    height: 400px;
-    width: 500px;
+    height: 600px;
+    width: 900px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,20 +25,43 @@
     margin-top: -60px;
 }
 
-.txt label{
-    display: block;
-    margin-bottom: 20px;
-    font-size: 18px;
-    font-weight: 500;
-    letter-spacing: 1px;
+.name-label {
+    display: inline-block;
+    font-size: 20px;
+    margin-right: 20px;
 }
 
-.txt input{
-    display: block;
+#name-form{
+    display: inline-block;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
-    height: 50px;
+    font-size: 20px;
+    width: 200px;
+    outline: 0;
+}
+
+.txt p {
+    display: block;
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 90px;
+}
+
+.number-label{
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-right: 20px;
+}
+
+#number-form{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
     font-size: 20px;
     width: 70px;
     outline: 0;
@@ -59,15 +82,15 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    height: 40px;
+    height: 45px;
     width: 350px;
     text-align: center;
     background-color: #e8a331;
-    margin-top: 40px;
-    line-height: 6px;
+    margin-top: 50px;
+    line-height: 45px;
     color: white;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 1px;
 
 }
@@ -83,17 +106,21 @@
 }
 
 .txt button {
-    margin-top: 20px;
-    width: 130px;
-    height: 30px;
-    font-size: 15px;
-    background-color: #029999;
+    border: none;
     color: white;
+    font-size: 14px;
+    text-transform: uppercase;
+    width: 150px;
+    height: 40px;
+    background-color: #00897b;
+    border-radius: 10em;
     outline: 0;
+    margin-top: 10px;
 }
 
 .txt button:hover {
     background-color: #005F5F;
 }
+
 
 

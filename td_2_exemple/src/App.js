@@ -14,6 +14,7 @@ import {
 
 import Home from './component/Home';
 import About from './component/About';
+import Score from './component/Score';
 import Students from './component/Students';
 import Student from './component/Students/Student';
 
@@ -40,6 +41,11 @@ export default class App extends React.Component {
             path: '/Abouts',
             text: 'A propos',
             component: About
+        },
+        {
+            path: '/Score',
+            text: 'Scores',
+            component: Score
         },
       {
         path: '/students',

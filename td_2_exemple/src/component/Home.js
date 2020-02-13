@@ -5,15 +5,20 @@ import './Home.css';
 const nbRandom = randomNb(101);
 var count = 0;
 
+
 export default class Home extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			numberToFind: nbRandom,
 			entry: null,
-			infos: ''
+			infos: '',
+			name: '',
+			essais: null,
+			score:[]
 		}
 	};
+
 
 	play (e) {
 		e.preventDefault();
@@ -29,17 +34,6 @@ export default class Home extends React.Component {
 		else {
 			this.setState({infos :"Gagné !"})
 		}
-
-//     if (nb !== entry) {
-//         if (nb < entry){
-//             infos = "C'est plus petit !";
-//         }else if (nb > entry){
-//             infos = "C'est plus grand !";
-//         }
-//     }
-//
-//     if(nb == entry){
-//         infos = "Gagné !";
 //
 // /*        if (myTable.length === 5) {
 //             myTable.shift();
@@ -52,6 +46,7 @@ export default class Home extends React.Component {
 		console.log(this.state.numberToFind);
 		console.log(this.state.entry);
 		console.log(this.state.infos);
+		console.log(this.state.name);
 	};
 
 
@@ -60,14 +55,20 @@ export default class Home extends React.Component {
 		this.setState({numberToFind: randomNb(101), entry: null, infos: 'Perdu !' });
 	};
 
+
+
 	render = () => {
+		const { score } = this.props;
 
 		return (
 			<div className="container">
 				<div className="card">
 					<div class="txt">
 						<form>
-							<label>Entrez un nombre entre 0 et 100 :</label>
+							<label class="name-label">Votre nom :</label>
+							<input id="name-form" type="text" value={this.state.name} onChange={e => this.setState({name: e.target.value})}/>
+							<p>A vous de jouer {this.state.name} !</p>
+							<label class="number-label">Entrez un nombre entre 0 et 100 :</label>
 							<input id="number-form" type="number" value={this.state.entry} onChange={e => this.setState({entry: e.target.value})}/>
 							<button id="submit-btn" onClick={e => this.play(e)} >Envoyer</button>
 							<button id="restart-btn" onClick={(e)=>this.replay(e)}>Recommencer</button>
