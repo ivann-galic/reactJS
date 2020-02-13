@@ -57,7 +57,7 @@ export default class Home extends React.Component {
 
 	replay (e) {
 		e.preventDefault();
-		this.setState({numberToFind: randomNb(101), entry: null, infos: '' });
+		this.setState({numberToFind: randomNb(101), entry: null, infos: 'Perdu !' });
 	};
 
 	render = () => {

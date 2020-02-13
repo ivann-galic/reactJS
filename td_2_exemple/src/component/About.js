@@ -10,7 +10,7 @@ export default class About extends React.Component {
             <div className="container-about">
                 <div className="card-about">
                     <div class="txt-about">
-                        <p>Membres de l'équipe</p>
+                        <p><span>Membres de l'équipe</span></p>
                         <p>Teddy</p>
                         <p>Hugo</p>
                         <p>Ivann</p>
