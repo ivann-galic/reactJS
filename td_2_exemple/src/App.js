@@ -13,6 +13,7 @@ import {
 } from "react-router-dom";
 
 import Home from './component/Home';
+import About from './component/About';
 import Students from './component/Students';
 import Student from './component/Students/Student';
 
@@ -35,6 +36,11 @@ export default class App extends React.Component {
         text: 'Accueil',
         component: Home
       },
+        {
+            path: '/Abouts',
+            text: 'A propos',
+            component: About
+        },
       {
         path: '/students',
         text: 'Etudiants',

@@ -4,12 +4,12 @@ var win = false;
 export function randomNb (max) {
     return (Math.floor(Math.random() * max));
 }
+const toto = randomNb(101);
 
-export function play (e, nb, entry, infos) {
+/*export function play (e, nb, entry, infos) {
     e.preventDefault();
 
     count++;
-
 
         if(nb>entry){
             infos = "C'est plus grand !";
@@ -32,25 +32,17 @@ export function play (e, nb, entry, infos) {
 //     if(nb == entry){
 //         infos = "Gagné !";
 //
-// /*        if (myTable.length === 5) {
+// /!*        if (myTable.length === 5) {
 //             myTable.shift();
 //         }
 //         myTable.push([myRandom,counter]);
-//         displayTable();*/
+//         displayTable();*!/
 //         win = true;
 //     }
     console.log(nb);
     console.log(entry);
     console.log(infos);
-}
-
-export function replay (e, nb, entry, infos) {
-    e.preventDefault();
-
-
-
-
-}
+}*/
 
 
 
