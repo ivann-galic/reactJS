@@ -122,5 +122,9 @@
     background-color: #005F5F;
 }
 
+.txt button:last-child:hover {
+    background-color: #00897b;
+}
+
 
 

@@ -3,8 +3,11 @@ import './Timer.css';
 
 
 export default class Timer extends React.Component {
-    state = {
-        seconds: 10,
+    constructor(props) {
+        super(props);
+        this.state = {
+            seconds: 0,
+        }
     };
 
     componentDidMount() {
@@ -26,7 +29,7 @@ export default class Timer extends React.Component {
     render() {
         const {seconds} = this.state;
         return (
-            <button className="timer">{seconds}</button>
+            <button className="timer" onClick={(e) => {e.preventDefault(); }}>{seconds}</button>
         )
     }
 }

@@ -4,6 +4,7 @@ import { createStore } from 'redux';
 import reducer from './redux/reducers'
 import './component/Home.css';
 import './App.css';
+import './component/Timer';
 
 import {
   BrowserRouter as Router,
@@ -61,7 +62,7 @@ export default class App extends React.Component {
       }
 
     ];
-    
+
     console.log('initial state', store.getState());
 
     const unsubscribe = store.subscribe(() => console.log(store.getState()));

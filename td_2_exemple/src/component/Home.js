@@ -1,5 +1,5 @@
 import React from "react";
-import {randomNb,replay} from "./Number";
+import {randomNb} from "./Number";
 import './Home.css';
 import Timer from "./Timer";
 
@@ -16,7 +16,11 @@ export default class Home extends React.Component {
 			infos: '',
 			name: '',
 			essais: null,
-			score:[]
+			player:[{
+				playerName: '',
+				winLoose:'',
+				score: null
+			}],
 		}
 	};
 
@@ -33,7 +37,8 @@ export default class Home extends React.Component {
 			this.setState({infos :"C'est plus petit !"})
 		}
 		else {
-			this.setState({infos :"Gagné !"})
+			this.setState({infos :"Gagné !"});
+			this.componentWillUnmount();
 		}
 //
 // /*        if (myTable.length === 5) {
